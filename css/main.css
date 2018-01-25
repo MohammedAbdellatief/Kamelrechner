@@ -4,15 +4,19 @@ html {
     color: #222;
     font-size: 1em;
     line-height: 1.4;
+    background-color: #FBB03B;
+    font-family: 'Montserrat', sans-serif;
 }
 
 ::-moz-selection {
-    background: #b3d4fc;
+    background: #000;
+    color: #fff;
     text-shadow: none;
 }
 
 ::selection {
-    background: #b3d4fc;
+    background: #000;
+    color: #fff;
     text-shadow: none;
 }
 
@@ -50,23 +54,270 @@ textarea {
     color: #000;
     padding: 0.2em 0;
 }
+a, .transition{
+    -webkit-transition: all .3s ease-in-out;
+    -moz-transition: all .3s ease-in-out;
+    -ms-transition: all .3s ease-in-out;
+    -o-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
+}
 
 
 /* ==========================================================================
-   Author's custom styles
+   My custom styles
    ========================================================================== */
 
+/*-----top header (flags and facebook button)------*/
+header{
+    height: 50px;
+}
+
+.main-container{
+    background-color: #fff;
+    margin: 0 30px 50px;
+    padding: 30px;
+    box-shadow: 0 10px 20px rgba(0,0,0,.2);
+    border-radius: 15px;
+}
+.lang-container{
+    float: right;
+    display: inline-block;
+    margin: 0 30px;
+    padding: 10px 0;
+    color: #fff;
+    font-size: .9rem;
+}
+
+.lang-container a{
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    border-radius: 30px;
+    text-indent: -9999px;
+    margin: 0 3px;
+    background: url(../img/flags.png) no-repeat scroll transparent;
+    vertical-align: middle;
+}
+.lang-container a:hover{
+    -moz-transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+    -o-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    transform: scale(1.1);
+}
+.lang-container a.active{
+    box-shadow: 0 0 0 2px rgba(255,255,255,.5);
+}
+.lang-container span{
+    margin-right: 5px;
+}
+
+a.de-lang{
+    background-position: -32px 0;
+}
+a.es-lang{
+    background-position: -63px 0;
+}
+
+
+/*------top artwork area------*/
+.top-artwork h1{
+    font-weight: 300;
+    font-size: 2.3rem;
+    text-align: center;
+    margin: 20px 0;
+}
+.top-artwork h1 strong{
+    color:#FBB03B;
+    font-weight: 700;
+    font-size: 2rem;
+    display: block;
+}
+.top-artwork p{
+    text-align: center;
+    font-size: .9rem;
+}
 
 
 
+/*-----form area style-----*/
+.form-container{
+    padding: 40px 0;
+}
+.form-row{
+    padding:20px;
+    border-bottom: solid 1px #eee;
+}
+
+.form-row h3{
+    color: #FBB03B;
+    margin: 0;
+    display: inline-block;
+    font-size: 1.1rem;
+}
+.form-row h3 span{
+    font-weight: 300;
+}
+.main-button{
+    margin: 70px auto 0;
+    display: table;
+    padding: 10px 30px;
+    color: #fff;
+    border: none;
+    background-color: #FBB03B;
+    font-size: 1.25rem;
+    border-radius: 100px;
+    text-transform: uppercase;
+    font-weight: 700;
+    outline: none;
+}
+.main-button:hover{
+    background-color: #62BB00;
+}
+/*custom radio button*/
+.custom-radios input[type="radio"] {
+    display: none;
+}
+.custom-radios input[type="radio"] + label {
+    box-shadow: 0 0 0 1px #FBB03B inset;
+    cursor: pointer;
+    padding: 10px;
+    text-align: center;
+    display: block;
+    position: relative;
+    border-radius: 5px;
+    margin: 10px 0;
+    font-size: .8rem;
+}
+.custom-radios input[type="radio"] + label:hover{
+    box-shadow: 0 0 0 1px #62BB00 inset;
+}
+.custom-radios input[type="radio"] + label:after {
+    content: '';
+    position: absolute;
+    right: -7px;
+    bottom: -7px;
+    width: 25px;
+    height: 25px;
+    border-radius: 25px;
+    background: #62BB00 url("../img/tik.svg") no-repeat center center scroll;
+    
+}
+.custom-radios input[type="radio"] + label:after {
+    visibility: hidden;
+}
+label.active{
+    box-shadow: 0 0 0 2px #62BB00 inset !important;
+}
+label.active:after {
+    visibility: visible !important;
+}
+
+/*custom range slider*/
+.rangeslider,
+.rangeslider__fill {
+    display:block;
+    border-radius:10px;
+}
+
+.rangeslider {
+    position:relative;
+}
+.rangeslider:after{
+    top:50%;
+    left:0;
+    right:0;
+    content:'';
+    width:100%;
+    height:5px;
+    margin-top:-2.5px;
+    border-radius:5px;
+    position:absolute;
+    background:#DDD;
+}
+
+.rangeslider--horizontal{
+    width:100%;
+    height:28px;
+}
+
+.rangeslider--vertical{
+    width:5px;
+    min-height:150px;
+    max-height:100%;
+}
+.rangeslider--disabled{
+    filter:progid:DXImageTransform.Microsoft.Alpha(Opacity=40);
+    opacity:0.4;
+}
+
+.rangeslider__fill{
+    position:absolute;
+    background:#62BB00;
+}
+.rangeslider--horizontal .rangeslider__fill{
+    top:0;
+    height:100%;
+}
+.rangeslider--vertical .rangeslider__fill{
+    bottom:0;
+    width:100%;
+}
+
+.rangeslider__handle{
+    top:50%;
+    width:24px;
+    height:24px;
+    cursor:pointer;
+    margin-top:-12px;
+    position:absolute;
+    background:#FBB03B;
+    border-radius:50%;
+    display:inline-block;
+    box-sizing: border-box;
+    border: solid 5px #fff;
+    box-shadow: 0 1px 5px 1px rgba(0,0,0,.2);
+}
+.rangeslider__handle:active{
+    box-shadow: 0 1px 17px 1px rgba(0,0,0,.2);
+    border: solid 3px #fff;
+}
+
+.rangeslider__fill,
+.rangeslider__handle{
+    z-index:1;
+}
+.rangeslider--horizontal .rangeslider__fill{
+    top:50%;
+    height:5px;
+    margin-top:-2.5px;
+}
+.rangeslider-container{
+    position: relative;
+    padding: 0 10px 0 80px;
+}
+
+.slideRight{
+    position: absolute;
+    left: 80px;
+    top: -10px;
+    color: #ddd;
+    font-size: .7rem;
+}
+
+.rang-output{
+    float: left;
+    margin: 0;
+    padding:0 10px;
+    font-size: 1.4rem;
+}
 
 
 
-
-
-
-
-
+/*result container*/
+.resul-containert{
+    text-align: center;
+}
 
 
 

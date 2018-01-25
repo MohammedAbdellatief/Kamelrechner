@@ -10,7 +10,13 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
+        <!--google font Montserrat-->
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:300,700" rel="stylesheet">
+
         <link rel="stylesheet" href="css/normalize.min.css">
+        <!-- Grid system -->
+        <link rel="stylesheet" href="css/pintsize.min.css">
+        <!-- Main style -->
         <link rel="stylesheet" href="css/main.css">
 
         <!--[if lt IE 9]>
@@ -21,12 +27,154 @@
         <!--[if lt IE 8]>
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
+        
+        <header>
+            <div class="lang-container">
+                <span>Language:</span>
+                <a href="#" title="English" class="en-lang active">En</a>
+                <a href="#" title="German" class="de-lang">De</a>
+                <a href="#" title="Spanish" class="es-lang">Es</a>
+            </div>
+        </header>
 
-        <p>Hello world! This is HTML5 Boilerplate.</p>
+        <div class="main-container">
+            <div class="top-artwork">
+                <div class="hero-container"></div>
+                <h1><strong>How many Camels</strong> For your boyfriend?</h1>
+                <p>To calculate the amount of camels you would get for your boyfriend, <br> we need some information first.</p>
+            </div>
+            <div class="form-container">
+                <form action="" id="camel-calculator-form">
+                    <div class="flex form-row">
+                        <div class="col col--4">
+                            <h3>Age</h3>
+                        </div>
+                        <div class="col col--8">
+                            <h2 class="age-output rang-output">22</h2>
+                            <div class="rangeslider-container">
+                                <input id="ageInput" type="range" value="22" step="1" min="14" max="70">
+                                <small class="slideRight">Slide &#x2192;</small>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex form-row">
+                        <div class="col col--4">
+                            <h3>Height <span>(cm)</span></h3>
+                        </div>
+                        <div class="col col--8">
+                            <h2 class="height-output rang-output">160</h2>
+                            <div class="rangeslider-container">
+                                <input id="heightInput" type="range" value="160" step="1" min="140" max="220">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex flex--middle form-row">
+                        <div class="col col--4">
+                            <h3>Hair color</h3>
+                        </div>
+                        <div class="col col--8">
+
+                            <div class="custom-radios flex flex--auto">
+                                <div class="col">
+                                    <input type="radio" id="blondeHair" name="hairColor" value="blonde">
+                                    <label for="blondeHair">Blonde</label>
+                                </div>
+                                <div class="col">
+                                    <input type="radio" id="brownHair" name="hairColor" value="brown">
+                                    <label for="brownHair">Brown</label>
+                                </div>
+                                <div class="col">
+                                    <input type="radio" id="blackHair" name="hairColor" checked="checked" value="black">
+                                    <label for="blackHair" class="active">Black</label>
+                                </div>
+                                <div class="col">
+                                    <input type="radio" id="redHair" name="hairColor" value="red">
+                                    <label for="redHair">Red</label>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="flex flex--middle form-row">
+                        <div class="col col--4">
+                            <h3>Eye color</h3>
+                        </div>
+                        <div class="col col--8">
+
+                            <div class="custom-radios flex flex--auto">
+                                <div class="col">
+                                    <input type="radio" id="blueEye" name="eyeColor" checked value="blue">
+                                    <label for="blueEye" class="active">Blue</label>
+                                </div>
+                                <div class="col">
+                                    <input type="radio" id="greenEye" name="eyeColor" value="green">
+                                    <label for="greenEye">Green</label>
+                                </div>
+                                <div class="col">
+                                    <input type="radio" id="brownEye" name="eyeColor" value="brown">
+                                    <label for="brownEye">Brown</label>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="flex flex--middle form-row">
+                        <div class="col col--4">
+                            <h3>Muscles</h3>
+                        </div>
+                        <div class="col col--8">
+
+                            <div class="custom-radios flex flex--auto">
+                                <div class="col">
+                                    <input type="radio" id="normalMuscles" name="muscles" checked value="normal">
+                                    <label for="normalMuscles" class="active">Normal</label>
+                                </div>
+                                <div class="col">
+                                    <input type="radio" id="strongMuscles" name="muscles" value="strong">
+                                    <label for="strongMuscles">Strong</label>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="flex flex--middle form-row">
+                        <div class="col col--4">
+                            <h3>Food habits</h3>
+                        </div>
+                        <div class="col col--8">
+
+                            <div class="custom-radios flex flex--auto">
+                                <div class="col">
+                                    <input type="radio" id="MeatLover" name="food" value="meatLover">
+                                    <label for="MeatLover">Meat lover</label>
+                                </div>
+                                <div class="col">
+                                    <input type="radio" id="vegetarian" name="food" checked value="vegetarian">
+                                    <label for="vegetarian" class="active">Vegetarian</label>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <button type="submit" class="main-button">calculate</button>
+                </form>
+            </div>
+
+        </div>
+        <div class="resul-containert">
+            <h2>your boyfriend is worth</h2>
+            <h3><strong id="number-of-camels">0</strong> Camels</h3>
+        </div>
+
+        <footer>
+
+        </footer>
 
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
 
+        <script src="js/vendor/rangeslider.min.js"></script>
+        <script src="js/camel-calculator.js"></script>
         <script src="js/main.js"></script>
     </body>
 </html>

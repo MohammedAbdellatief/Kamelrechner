@@ -1,0 +1,3 @@
+# ignore a folder created automatically by my IDE
+.idea
+
