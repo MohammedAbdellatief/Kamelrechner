@@ -61,7 +61,10 @@ a, .transition{
     -o-transition: all .3s ease-in-out;
     transition: all .3s ease-in-out;
 }
-
+svg{
+    width: 100%;
+    height: auto !important;
+}
 
 /* ==========================================================================
    My custom styles
@@ -129,7 +132,8 @@ a.es-lang{
     position: relative;
 }
 .camel{
-    max-width: 325px;
+    max-width: 340px;
+    height: 225px;
     margin: auto;
     position: relative;
     z-index: 2;
@@ -219,7 +223,13 @@ a.es-lang{
     position: relative;
     border-radius: 5px;
     margin: 10px 0;
-    font-size: .8rem;
+    font-size: .75rem;
+}
+.icon-button{
+    width: 30%;
+    min-width: 50px;
+    display: block;
+    margin: 10px auto;
 }
 .custom-radios input[type="radio"] + label:hover{
     box-shadow: 0 0 0 1px #62BB00 inset;
@@ -344,6 +354,7 @@ a.es-lang{
 .rangeslider-container{
     position: relative;
     padding: 0 10px 0 80px;
+    margin: 10px 0;
 }
 
 .slideRight{
@@ -358,7 +369,7 @@ a.es-lang{
 .rang-output{
     float: left;
     margin: 0;
-    padding:0 10px;
+    padding:10px;
     font-size: 1.4rem;
 }
 

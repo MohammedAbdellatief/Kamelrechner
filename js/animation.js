@@ -40,7 +40,7 @@
             // Head Animation
             function headAnimation() {
                 var tl = new TimelineMax();
-                    tl.to(head, .7, { y:'+=4',ease: Power1.easeInOut, repeat: -1, yoyo: true }, 0)
+                    tl.to(head, .7, { y:'+=6',ease: Power1.easeInOut, repeat: -1, yoyo: true }, 0)
                 ;
                 return tl;
             }
@@ -59,12 +59,12 @@
 
             // mouth Animation
             function MouthAnimation() {
-                var tl = new TimelineMax({repeat: -1});
+                var tl = new TimelineMax();
                 tl
-                    .to(lowerMouth,1.5, { bezier:{ type:'quadratic', values:[ {x:0, y:0}, {x:4, y:0}, {x:7, y:5}, {x:10, y:8}, {x:0, y:8}, {x:-4, y:8}, {x:-5, y:4}, {x:-4, y:0},{x:0, y:0} ] },ease: Power1.easeInOut},0)
-                    .to(upperMouth,1.4, { bezier:{type:'quadratic', values:[ {x:0, y:0}, {x:1, y:0}, {x:1, y:1}, {x:1, y:3}, {x:0, y:3}, {x:-1, y:3}, {x:-1, y:1}, {x:-1, y:0},{x:0, y:0} ] },ease: Power1.easeInOut},0)
-                    .to(nose,.70,{ y:'+=3',ease: Power1.easeInOut, repeat: 1, yoyo: true },0)
-                    .to(lowerMouth,1.2, {rotation:'-=6',transformOrigin:"50% 50%",ease: Power1.easeOut},0)
+                    .to(lowerMouth,1.5, { bezier:{ type:'quadratic', values:[ {x:0, y:0}, {x:4, y:0}, {x:7, y:4}, {x:10, y:6}, {x:0, y:6}, {x:-4, y:6}, {x:-5, y:4}, {x:-4, y:0},{x:0, y:0} ] },ease: Power1.easeInOut, repeat: -1},0)
+                    .to(lowerMouth,.74, {rotation:'-=10',transformOrigin:"50% 50%",ease: Power1.easeInOut, yoyo:true, repeat: -1},0)
+                    .to(upperMouth,1.5, { bezier:{type:'quadratic', values:[ {x:0, y:0}, {x:1, y:0}, {x:1, y:1}, {x:1, y:3}, {x:0, y:3}, {x:-1, y:3}, {x:-1, y:1}, {x:-1, y:0},{x:0, y:0} ] },ease: Power1.easeInOut, repeat: -1},0)
+                    .to(nose,.74,{ y:'+=3',ease: Power1.easeInOut, repeat: -1, yoyo: true },0)
                 ;
                 return tl;
             }
