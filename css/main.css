@@ -438,6 +438,27 @@ a.es-lang{
     .form-row {
         padding: 20px 0;
     }
+    header, .main-container, footer{
+        width: calc(100% - 40px);
+    }
+    .main-container{
+        padding: 20px;
+    }
+    .camel{
+        height: auto;
+    }
+    .top-artwork p{
+        max-width: 100%;
+    }
+    .top-artwork h1{
+        font-size: 1.8rem;
+    }
+    .top-artwork h1 strong{
+        font-size: 1.6rem;
+    }
+    .top-artwork {
+        margin-bottom: 10px;
+    }
 }
 
 
